@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: calc-temp
+  labels:
+    name: calc-temp
+spec:
+  containers:
+  - name: calc-temp
+    image: amisaka/conversao-temperatura:latest
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 80
+
+
